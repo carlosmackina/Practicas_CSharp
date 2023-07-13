@@ -1,0 +1,10 @@
+﻿body div
+{
+    width:auto;
+    padding-left:5px;
+    padding-top:5px;
+}
+.lista_de_productos li
+{
+    padding-top:10px;
+}
