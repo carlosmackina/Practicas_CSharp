@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\Interfaces\Interfaces\bin\Debug\Interfaces.exe.config
+C:\Users\user\source\repos\Interfaces\Interfaces\bin\Debug\Interfaces.exe
+C:\Users\user\source\repos\Interfaces\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.Form1.resources
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.Properties.Resources.resources
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.exe
+C:\Users\user\source\repos\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
