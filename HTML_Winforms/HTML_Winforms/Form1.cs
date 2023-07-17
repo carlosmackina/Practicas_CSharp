@@ -12,29 +12,54 @@ using System.Windows.Forms;
 
 namespace HTML_Winforms
 {
-     
+
     public partial class Form1 : Form
     {
+        
+        public string direccionPagina1 = @"Pages.HTMLPage1.html";
+        public string direccionPagina2 = @"Pages.HTMLPage2.html";
         public Form1()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            string pagina1 = GetEmbeddedResource("HTML_Winforms", direccionPagina1);
+            webBrowser1.DocumentText = pagina1;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public string GetEmbeddedResource(string namespacename, string filename)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Multiselect=false, ValidateNames=true, Filter= "HTML|*.html" })
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = namespacename + "." + filename;
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            try
             {
-                if (ofd.ShowDialog() == DialogResult.OK)
+                using (StreamReader reader = new StreamReader(stream))
                 {
-                    textBox1.Text = ofd.FileName;
-                    FileStream fs = new FileStream(ofd.FileName, FileMode.Open, FileAccess.Read);
-                    webBrowser1.DocumentStream = fs;
+                    string result = reader.ReadToEnd();
+                    return result;
                 }
             }
+            catch(Exception ex)
+            {
+                return "No se encontro la pagina";
+            }
+        }
+        private void buttonPagina1_Click(object sender, EventArgs e)
+        {
+            string pagina1 = GetEmbeddedResource("HTML_Winforms", direccionPagina1);
+            webBrowser1.DocumentText = pagina1;
+        }
+        private void buttonPagina2_Click(object sender, EventArgs e)
+        {
+            string pagina2 = GetEmbeddedResource("HTML_Winforms", direccionPagina2);
+            webBrowser1.DocumentText = pagina2;
         }
     }
+
+
+
+    
+
+
 }
